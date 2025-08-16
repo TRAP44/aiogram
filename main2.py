@@ -34,14 +34,7 @@ async def main() -> None:
 
     dp.include_router(routes.router)
 
-    await bot.set_my_commands([
-        BotCommand(command="start", description="Начать регистрацию"),
-        BotCommand(command="add", description="Добавить нового пользователя (alias /start)"),
-        BotCommand(command="users", description="Показать всех пользователей"),
-        BotCommand(command="get", description="Найти пользователя по ID"),
-        BotCommand(command="update", description="Обновить данные пользователя"),
-        BotCommand(command="delete", description="Удалить пользователя по ID"),
-    ])
+    await bot.set_my_commands([])
 
     try:
         await dp.start_polling(bot)
